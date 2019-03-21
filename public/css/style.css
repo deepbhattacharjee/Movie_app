@@ -1,0 +1,12 @@
+.center{
+    width: 30%;
+    margin: 0 auto;
+}
+
+#movies .col-md-4 img {
+    height: 290px;
+}
+
+#movies .col-md-4 #pad{
+    margin-bottom: 15px;
+}

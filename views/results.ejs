@@ -1,0 +1,27 @@
+<% include partials/header %>
+<div class= "container">
+      <header class="jumbotron">
+            <div class="container">
+                  <h1>List of Movies</h1>
+                  <p>
+                  <a class="btn btn-primary btn-large" href="/">Search again</a>
+                  </p>
+            </div>
+      </header>
+      <div id="movies" class="row text-center" style="display: flex; flex-wrap: wrap;">
+            <% data["Search"].forEach(function(movie){ %>
+            <% var imdb_url = 'https://www.imdb.com/title/' + movie['imdbID']; %>
+                  <div class="col-md-4">
+
+                        <img src='<%= movie["Poster"]%>' alt='Movie poster'>
+                        <h4><%= movie["Title"] %></h4>
+                        <a id="pad" class="btn btn-success btn-sm" href='<%= imdb_url %>''>View on IMDB</a>
+                                                                  
+                  </div> 
+            <% }); %>
+      </div>
+</div>
+
+
+
+
