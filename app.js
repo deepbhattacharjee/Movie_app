@@ -25,6 +25,10 @@ app.get('/results', function(req,res){
     });
 });
 
+app.get('*', function(req,res){
+    res.send("Oops!! Page not found");
+});
+
 app.listen("3000", function(){
     console.log("Server Has Started");
 });
