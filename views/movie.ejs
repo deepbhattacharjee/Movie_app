@@ -1,0 +1,36 @@
+<% include partials/header %>
+<% var imdb_url = 'https://www.imdb.com/title/' + data['imdbID']; %>
+
+<div id="movies" class="row">
+    <div class="col-md-4">
+        <img src='<%= data["Poster"]%>' alt='Movie poster' class="thumbnail">
+    </div>
+    <div class="col-md-8">
+        <h2><%= data['Title'] %></h2>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Genre:</strong> <%= data['Genre'] %></li>
+            <li class="list-group-item"><strong>Released:</strong> <%= data['Released'] %></li>
+            <li class="list-group-item"><strong>Rated:</strong> <%= data['Rated'] %></li>
+            <li class="list-group-item"><strong>ImdbRating:</strong> <%= data['imdbRating'] %></li>
+            <li class="list-group-item"><strong>Director:</strong> <%= data['Director'] %></li>
+            <li class="list-group-item"><strong>Actors:</strong> <%= data['Actors'] %></li>
+            <li class="list-group-item"><strong>Runtime:</strong> <%= data['Runtime'] %></li>
+
+        </ul>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="well">
+        <h3>Plot</h3>
+        <%= data['Plot'] %> <hr>
+        <a class="btn btn-success btn-sm" href='<%= imdb_url %>''>View on IMDB</a>
+        <a class="btn btn-primary btn-sm" href="/">Search again</a>
+
+    </div>
+</div>
+
+
+
+
