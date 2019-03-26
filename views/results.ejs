@@ -8,6 +8,7 @@
                   </p>
             </div>
       </header>
+      
       <div id="movies" class="row text-center" style="display: flex; flex-wrap: wrap;">
             <% data["Search"].forEach(function(movie){ %>
             <% var imdb_url = 'https://www.imdb.com/title/' + movie['imdbID']; %>
@@ -15,12 +16,16 @@
 
                         <img src='<%= movie["Poster"]%>' alt='Movie poster'>
                         <h4><%= movie["Title"] %></h4>
-                        <a id="pad" class="btn btn-success btn-sm" href='<%= imdb_url %>''>View on IMDB</a>
+                        <a id="pad" href= '/movie/<%= movie["imdbID"] %>' class="btn btn-success btn-sm">Movie Details</a>
                                                                   
                   </div> 
             <% }); %>
       </div>
 </div>
+
+
+
+
 
 
 
