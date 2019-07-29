@@ -26,7 +26,7 @@ app.get('/results', function(req,res){
 });
 
 app.get("/movie/:imdbID", function(req, res){
-    request("http://www.omdbapi.com/?i=" + req.params.imdbID + "&apikey=852159f0", function(error, response, body) {
+    request("http://www.omdbapi.com/?i=" + req.params.imdbID + "&apikey=YOUR API KEY", function(error, response, body) {
         if(!error && response.statusCode == 200) {
             var data = JSON.parse(body);
             res.render("movie", {data: data});
